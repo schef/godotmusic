@@ -1,0 +1,667 @@
+[gd_scene load_steps=183 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://interface/fonts/montserrat_eb_128.tres" type="DynamicFont" id=2]
+[ext_resource path="res://interface/fonts/montserrat_eb_64.tres" type="DynamicFont" id=3]
+[ext_resource path="res://addons/SimpleSampler/sample_resource.gd" type="Script" id=4]
+[ext_resource path="res://addons/SimpleSampler/multisampler.gd" type="Script" id=5]
+[ext_resource path="res://ogg/021.ogg" type="AudioStream" id=6]
+[ext_resource path="res://ogg/022.ogg" type="AudioStream" id=7]
+[ext_resource path="res://ogg/023.ogg" type="AudioStream" id=8]
+[ext_resource path="res://ogg/024.ogg" type="AudioStream" id=9]
+[ext_resource path="res://ogg/025.ogg" type="AudioStream" id=10]
+[ext_resource path="res://ogg/026.ogg" type="AudioStream" id=11]
+[ext_resource path="res://ogg/027.ogg" type="AudioStream" id=12]
+[ext_resource path="res://ogg/028.ogg" type="AudioStream" id=13]
+[ext_resource path="res://ogg/029.ogg" type="AudioStream" id=14]
+[ext_resource path="res://ogg/030.ogg" type="AudioStream" id=15]
+[ext_resource path="res://ogg/031.ogg" type="AudioStream" id=16]
+[ext_resource path="res://ogg/032.ogg" type="AudioStream" id=17]
+[ext_resource path="res://ogg/033.ogg" type="AudioStream" id=18]
+[ext_resource path="res://ogg/034.ogg" type="AudioStream" id=19]
+[ext_resource path="res://ogg/035.ogg" type="AudioStream" id=20]
+[ext_resource path="res://ogg/036.ogg" type="AudioStream" id=21]
+[ext_resource path="res://ogg/037.ogg" type="AudioStream" id=22]
+[ext_resource path="res://ogg/038.ogg" type="AudioStream" id=23]
+[ext_resource path="res://ogg/039.ogg" type="AudioStream" id=24]
+[ext_resource path="res://ogg/040.ogg" type="AudioStream" id=25]
+[ext_resource path="res://ogg/041.ogg" type="AudioStream" id=26]
+[ext_resource path="res://ogg/042.ogg" type="AudioStream" id=27]
+[ext_resource path="res://ogg/043.ogg" type="AudioStream" id=28]
+[ext_resource path="res://ogg/044.ogg" type="AudioStream" id=29]
+[ext_resource path="res://ogg/045.ogg" type="AudioStream" id=30]
+[ext_resource path="res://ogg/046.ogg" type="AudioStream" id=31]
+[ext_resource path="res://ogg/047.ogg" type="AudioStream" id=32]
+[ext_resource path="res://ogg/048.ogg" type="AudioStream" id=33]
+[ext_resource path="res://ogg/049.ogg" type="AudioStream" id=34]
+[ext_resource path="res://ogg/050.ogg" type="AudioStream" id=35]
+[ext_resource path="res://ogg/051.ogg" type="AudioStream" id=36]
+[ext_resource path="res://ogg/052.ogg" type="AudioStream" id=37]
+[ext_resource path="res://ogg/053.ogg" type="AudioStream" id=38]
+[ext_resource path="res://ogg/054.ogg" type="AudioStream" id=39]
+[ext_resource path="res://ogg/055.ogg" type="AudioStream" id=40]
+[ext_resource path="res://ogg/056.ogg" type="AudioStream" id=41]
+[ext_resource path="res://ogg/057.ogg" type="AudioStream" id=42]
+[ext_resource path="res://ogg/058.ogg" type="AudioStream" id=43]
+[ext_resource path="res://ogg/059.ogg" type="AudioStream" id=44]
+[ext_resource path="res://ogg/060.ogg" type="AudioStream" id=45]
+[ext_resource path="res://ogg/061.ogg" type="AudioStream" id=46]
+[ext_resource path="res://ogg/062.ogg" type="AudioStream" id=47]
+[ext_resource path="res://ogg/063.ogg" type="AudioStream" id=48]
+[ext_resource path="res://ogg/064.ogg" type="AudioStream" id=49]
+[ext_resource path="res://ogg/065.ogg" type="AudioStream" id=50]
+[ext_resource path="res://ogg/066.ogg" type="AudioStream" id=51]
+[ext_resource path="res://ogg/067.ogg" type="AudioStream" id=52]
+[ext_resource path="res://ogg/068.ogg" type="AudioStream" id=53]
+[ext_resource path="res://ogg/069.ogg" type="AudioStream" id=54]
+[ext_resource path="res://ogg/070.ogg" type="AudioStream" id=55]
+[ext_resource path="res://ogg/071.ogg" type="AudioStream" id=56]
+[ext_resource path="res://ogg/072.ogg" type="AudioStream" id=57]
+[ext_resource path="res://ogg/073.ogg" type="AudioStream" id=58]
+[ext_resource path="res://ogg/074.ogg" type="AudioStream" id=59]
+[ext_resource path="res://ogg/075.ogg" type="AudioStream" id=60]
+[ext_resource path="res://ogg/076.ogg" type="AudioStream" id=61]
+[ext_resource path="res://ogg/077.ogg" type="AudioStream" id=62]
+[ext_resource path="res://ogg/078.ogg" type="AudioStream" id=63]
+[ext_resource path="res://ogg/079.ogg" type="AudioStream" id=64]
+[ext_resource path="res://ogg/080.ogg" type="AudioStream" id=65]
+[ext_resource path="res://ogg/081.ogg" type="AudioStream" id=66]
+[ext_resource path="res://ogg/082.ogg" type="AudioStream" id=67]
+[ext_resource path="res://ogg/083.ogg" type="AudioStream" id=68]
+[ext_resource path="res://ogg/084.ogg" type="AudioStream" id=69]
+[ext_resource path="res://ogg/085.ogg" type="AudioStream" id=70]
+[ext_resource path="res://ogg/086.ogg" type="AudioStream" id=71]
+[ext_resource path="res://ogg/087.ogg" type="AudioStream" id=72]
+[ext_resource path="res://ogg/088.ogg" type="AudioStream" id=73]
+[ext_resource path="res://ogg/089.ogg" type="AudioStream" id=74]
+[ext_resource path="res://ogg/090.ogg" type="AudioStream" id=75]
+[ext_resource path="res://ogg/091.ogg" type="AudioStream" id=76]
+[ext_resource path="res://ogg/092.ogg" type="AudioStream" id=77]
+[ext_resource path="res://ogg/093.ogg" type="AudioStream" id=78]
+[ext_resource path="res://ogg/094.ogg" type="AudioStream" id=79]
+[ext_resource path="res://ogg/095.ogg" type="AudioStream" id=80]
+[ext_resource path="res://ogg/096.ogg" type="AudioStream" id=81]
+[ext_resource path="res://ogg/097.ogg" type="AudioStream" id=82]
+[ext_resource path="res://ogg/098.ogg" type="AudioStream" id=83]
+[ext_resource path="res://ogg/099.ogg" type="AudioStream" id=84]
+[ext_resource path="res://ogg/100.ogg" type="AudioStream" id=85]
+[ext_resource path="res://ogg/101.ogg" type="AudioStream" id=86]
+[ext_resource path="res://ogg/102.ogg" type="AudioStream" id=87]
+[ext_resource path="res://ogg/103.ogg" type="AudioStream" id=88]
+[ext_resource path="res://ogg/104.ogg" type="AudioStream" id=89]
+[ext_resource path="res://ogg/105.ogg" type="AudioStream" id=90]
+[ext_resource path="res://ogg/106.ogg" type="AudioStream" id=91]
+[ext_resource path="res://ogg/107.ogg" type="AudioStream" id=92]
+[ext_resource path="res://ogg/108.ogg" type="AudioStream" id=93]
+[ext_resource path="res://addons/SimpleSampler/note_value.gd" type="Script" id=94]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 4 )
+stream = ExtResource( 6 )
+tone = "A"
+octave = 1
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+stream = ExtResource( 7 )
+tone = "A#"
+octave = 1
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 4 )
+stream = ExtResource( 8 )
+tone = "B"
+octave = 1
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 4 )
+stream = ExtResource( 9 )
+tone = "C"
+octave = 2
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 4 )
+stream = ExtResource( 10 )
+tone = "C#"
+octave = 2
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 4 )
+stream = ExtResource( 11 )
+tone = "D"
+octave = 2
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 4 )
+stream = ExtResource( 12 )
+tone = "D#"
+octave = 2
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 4 )
+stream = ExtResource( 13 )
+tone = "E"
+octave = 2
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 4 )
+stream = ExtResource( 14 )
+tone = "F"
+octave = 2
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 4 )
+stream = ExtResource( 15 )
+tone = "F#"
+octave = 2
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 4 )
+stream = ExtResource( 16 )
+tone = "G"
+octave = 2
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 4 )
+stream = ExtResource( 17 )
+tone = "G#"
+octave = 2
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 4 )
+stream = ExtResource( 18 )
+tone = "A"
+octave = 2
+
+[sub_resource type="Resource" id=14]
+script = ExtResource( 4 )
+stream = ExtResource( 19 )
+tone = "A#"
+octave = 2
+
+[sub_resource type="Resource" id=15]
+script = ExtResource( 4 )
+stream = ExtResource( 20 )
+tone = "B"
+octave = 2
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 4 )
+stream = ExtResource( 21 )
+tone = "C"
+octave = 3
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 4 )
+stream = ExtResource( 22 )
+tone = "C#"
+octave = 3
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 4 )
+stream = ExtResource( 23 )
+tone = "D"
+octave = 3
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 4 )
+stream = ExtResource( 24 )
+tone = "D#"
+octave = 3
+
+[sub_resource type="Resource" id=20]
+script = ExtResource( 4 )
+stream = ExtResource( 25 )
+tone = "E"
+octave = 3
+
+[sub_resource type="Resource" id=21]
+script = ExtResource( 4 )
+stream = ExtResource( 26 )
+tone = "F"
+octave = 3
+
+[sub_resource type="Resource" id=22]
+script = ExtResource( 4 )
+stream = ExtResource( 27 )
+tone = "F#"
+octave = 3
+
+[sub_resource type="Resource" id=23]
+script = ExtResource( 4 )
+stream = ExtResource( 28 )
+tone = "G"
+octave = 3
+
+[sub_resource type="Resource" id=24]
+script = ExtResource( 4 )
+stream = ExtResource( 29 )
+tone = "G#"
+octave = 3
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 4 )
+stream = ExtResource( 30 )
+tone = "A"
+octave = 3
+
+[sub_resource type="Resource" id=26]
+script = ExtResource( 4 )
+stream = ExtResource( 31 )
+tone = "A#"
+octave = 3
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 4 )
+stream = ExtResource( 32 )
+tone = "B"
+octave = 3
+
+[sub_resource type="Resource" id=28]
+script = ExtResource( 4 )
+stream = ExtResource( 33 )
+tone = "C"
+octave = 4
+
+[sub_resource type="Resource" id=29]
+script = ExtResource( 4 )
+stream = ExtResource( 34 )
+tone = "C#"
+octave = 4
+
+[sub_resource type="Resource" id=30]
+script = ExtResource( 4 )
+stream = ExtResource( 35 )
+tone = "D"
+octave = 4
+
+[sub_resource type="Resource" id=31]
+script = ExtResource( 4 )
+stream = ExtResource( 36 )
+tone = "D#"
+octave = 4
+
+[sub_resource type="Resource" id=32]
+script = ExtResource( 4 )
+stream = ExtResource( 37 )
+tone = "E"
+octave = 4
+
+[sub_resource type="Resource" id=33]
+script = ExtResource( 4 )
+stream = ExtResource( 38 )
+tone = "F"
+octave = 4
+
+[sub_resource type="Resource" id=34]
+script = ExtResource( 4 )
+stream = ExtResource( 39 )
+tone = "F#"
+octave = 4
+
+[sub_resource type="Resource" id=35]
+script = ExtResource( 4 )
+stream = ExtResource( 40 )
+tone = "G"
+octave = 4
+
+[sub_resource type="Resource" id=36]
+script = ExtResource( 4 )
+stream = ExtResource( 41 )
+tone = "G#"
+octave = 4
+
+[sub_resource type="Resource" id=37]
+script = ExtResource( 4 )
+stream = ExtResource( 42 )
+tone = "A"
+octave = 4
+
+[sub_resource type="Resource" id=38]
+script = ExtResource( 4 )
+stream = ExtResource( 43 )
+tone = "A#"
+octave = 4
+
+[sub_resource type="Resource" id=39]
+script = ExtResource( 4 )
+stream = ExtResource( 44 )
+tone = "B"
+octave = 4
+
+[sub_resource type="Resource" id=40]
+script = ExtResource( 4 )
+stream = ExtResource( 45 )
+tone = "C"
+octave = 5
+
+[sub_resource type="Resource" id=41]
+script = ExtResource( 4 )
+stream = ExtResource( 46 )
+tone = "C#"
+octave = 5
+
+[sub_resource type="Resource" id=42]
+script = ExtResource( 4 )
+stream = ExtResource( 47 )
+tone = "D"
+octave = 5
+
+[sub_resource type="Resource" id=43]
+script = ExtResource( 4 )
+stream = ExtResource( 48 )
+tone = "D#"
+octave = 5
+
+[sub_resource type="Resource" id=44]
+script = ExtResource( 4 )
+stream = ExtResource( 49 )
+tone = "E"
+octave = 5
+
+[sub_resource type="Resource" id=45]
+script = ExtResource( 4 )
+stream = ExtResource( 50 )
+tone = "F"
+octave = 5
+
+[sub_resource type="Resource" id=46]
+script = ExtResource( 4 )
+stream = ExtResource( 51 )
+tone = "F#"
+octave = 5
+
+[sub_resource type="Resource" id=47]
+script = ExtResource( 4 )
+stream = ExtResource( 52 )
+tone = "G"
+octave = 5
+
+[sub_resource type="Resource" id=48]
+script = ExtResource( 4 )
+stream = ExtResource( 53 )
+tone = "G#"
+octave = 5
+
+[sub_resource type="Resource" id=49]
+script = ExtResource( 4 )
+stream = ExtResource( 54 )
+tone = "A"
+octave = 5
+
+[sub_resource type="Resource" id=50]
+script = ExtResource( 4 )
+stream = ExtResource( 55 )
+tone = "A#"
+octave = 5
+
+[sub_resource type="Resource" id=51]
+script = ExtResource( 4 )
+stream = ExtResource( 56 )
+tone = "B"
+octave = 5
+
+[sub_resource type="Resource" id=52]
+script = ExtResource( 4 )
+stream = ExtResource( 57 )
+tone = "C"
+octave = 6
+
+[sub_resource type="Resource" id=53]
+script = ExtResource( 4 )
+stream = ExtResource( 58 )
+tone = "C#"
+octave = 6
+
+[sub_resource type="Resource" id=54]
+script = ExtResource( 4 )
+stream = ExtResource( 59 )
+tone = "D"
+octave = 6
+
+[sub_resource type="Resource" id=55]
+script = ExtResource( 4 )
+stream = ExtResource( 60 )
+tone = "D#"
+octave = 6
+
+[sub_resource type="Resource" id=56]
+script = ExtResource( 4 )
+stream = ExtResource( 61 )
+tone = "E"
+octave = 6
+
+[sub_resource type="Resource" id=57]
+script = ExtResource( 4 )
+stream = ExtResource( 62 )
+tone = "F"
+octave = 6
+
+[sub_resource type="Resource" id=58]
+script = ExtResource( 4 )
+stream = ExtResource( 63 )
+tone = "F#"
+octave = 6
+
+[sub_resource type="Resource" id=59]
+script = ExtResource( 4 )
+stream = ExtResource( 64 )
+tone = "G"
+octave = 6
+
+[sub_resource type="Resource" id=60]
+script = ExtResource( 4 )
+stream = ExtResource( 65 )
+tone = "G#"
+octave = 6
+
+[sub_resource type="Resource" id=61]
+script = ExtResource( 4 )
+stream = ExtResource( 66 )
+tone = "A"
+octave = 6
+
+[sub_resource type="Resource" id=62]
+script = ExtResource( 4 )
+stream = ExtResource( 67 )
+tone = "A#"
+octave = 6
+
+[sub_resource type="Resource" id=63]
+script = ExtResource( 4 )
+stream = ExtResource( 68 )
+tone = "B"
+octave = 6
+
+[sub_resource type="Resource" id=64]
+script = ExtResource( 4 )
+stream = ExtResource( 69 )
+tone = "C"
+octave = 7
+
+[sub_resource type="Resource" id=65]
+script = ExtResource( 4 )
+stream = ExtResource( 70 )
+tone = "C#"
+octave = 7
+
+[sub_resource type="Resource" id=66]
+script = ExtResource( 4 )
+stream = ExtResource( 71 )
+tone = "D"
+octave = 7
+
+[sub_resource type="Resource" id=67]
+script = ExtResource( 4 )
+stream = ExtResource( 72 )
+tone = "D#"
+octave = 7
+
+[sub_resource type="Resource" id=68]
+script = ExtResource( 4 )
+stream = ExtResource( 73 )
+tone = "E"
+octave = 7
+
+[sub_resource type="Resource" id=69]
+script = ExtResource( 4 )
+stream = ExtResource( 74 )
+tone = "F"
+octave = 7
+
+[sub_resource type="Resource" id=70]
+script = ExtResource( 4 )
+stream = ExtResource( 75 )
+tone = "F#"
+octave = 7
+
+[sub_resource type="Resource" id=71]
+script = ExtResource( 4 )
+stream = ExtResource( 76 )
+tone = "G"
+octave = 7
+
+[sub_resource type="Resource" id=72]
+script = ExtResource( 4 )
+stream = ExtResource( 77 )
+tone = "G#"
+octave = 7
+
+[sub_resource type="Resource" id=73]
+script = ExtResource( 4 )
+stream = ExtResource( 78 )
+tone = "A"
+octave = 7
+
+[sub_resource type="Resource" id=74]
+script = ExtResource( 4 )
+stream = ExtResource( 79 )
+tone = "A#"
+octave = 7
+
+[sub_resource type="Resource" id=75]
+script = ExtResource( 4 )
+stream = ExtResource( 80 )
+tone = "B"
+octave = 7
+
+[sub_resource type="Resource" id=76]
+script = ExtResource( 4 )
+stream = ExtResource( 81 )
+tone = "C"
+octave = 8
+
+[sub_resource type="Resource" id=77]
+script = ExtResource( 4 )
+stream = ExtResource( 82 )
+tone = "C#"
+octave = 8
+
+[sub_resource type="Resource" id=78]
+script = ExtResource( 4 )
+stream = ExtResource( 83 )
+tone = "D"
+octave = 8
+
+[sub_resource type="Resource" id=79]
+script = ExtResource( 4 )
+stream = ExtResource( 84 )
+tone = "D#"
+octave = 8
+
+[sub_resource type="Resource" id=80]
+script = ExtResource( 4 )
+stream = ExtResource( 85 )
+tone = "E"
+octave = 8
+
+[sub_resource type="Resource" id=81]
+script = ExtResource( 4 )
+stream = ExtResource( 86 )
+tone = "F"
+octave = 8
+
+[sub_resource type="Resource" id=82]
+script = ExtResource( 4 )
+stream = ExtResource( 87 )
+tone = "F#"
+octave = 8
+
+[sub_resource type="Resource" id=83]
+script = ExtResource( 4 )
+stream = ExtResource( 88 )
+tone = "G"
+octave = 8
+
+[sub_resource type="Resource" id=84]
+script = ExtResource( 4 )
+stream = ExtResource( 89 )
+tone = "G#"
+octave = 8
+
+[sub_resource type="Resource" id=85]
+script = ExtResource( 4 )
+stream = ExtResource( 90 )
+tone = "A"
+octave = 8
+
+[sub_resource type="Resource" id=86]
+script = ExtResource( 4 )
+stream = ExtResource( 91 )
+tone = "A#"
+octave = 8
+
+[sub_resource type="Resource" id=87]
+script = ExtResource( 4 )
+stream = ExtResource( 92 )
+tone = "B"
+octave = 8
+
+[sub_resource type="Resource" id=88]
+script = ExtResource( 4 )
+stream = ExtResource( 93 )
+tone = "C"
+octave = 9
+
+[node name="Game" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Container" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+margin_left = 376.0
+margin_top = 840.0
+margin_right = 704.0
+margin_bottom = 1080.0
+
+[node name="Touches" type="Label" parent="Container/VBoxContainer"]
+margin_right = 328.0
+margin_bottom = 157.0
+custom_fonts/font = ExtResource( 2 )
+text = "999"
+align = 1
+
+[node name="Label" type="Label" parent="Container/VBoxContainer"]
+margin_top = 161.0
+margin_right = 328.0
+margin_bottom = 240.0
+custom_fonts/font = ExtResource( 3 )
+text = "TOUCHES"
+align = 1
+
+[node name="Multisampler" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+script = ExtResource( 5 )
+samples = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ]
+attack = 0.01
+sustain = 1.0
+release = 0.2
+max_notes = 4
+
+[node name="NoteValueCalculator" type="Node" parent="."]
+script = ExtResource( 94 )
