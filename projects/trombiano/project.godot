@@ -42,6 +42,10 @@ config/name="Godot and Android"
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
+[audio]
+
+output_latency=1
+
 [autoload]
 
 NoteValue="*res://addons/SimpleSampler/note_value.gd"
@@ -61,5 +65,4 @@ enabled=PoolStringArray( "SimpleSampler" )
 [rendering]
 
 vram_compression/import_etc=true
-environment/default_clear_color=Color( 0.298039, 0.831373, 0.858824, 1 )
 environment/default_environment="res://default_env.tres"

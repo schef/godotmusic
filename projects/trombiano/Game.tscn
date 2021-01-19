@@ -1,8 +1,6 @@
-[gd_scene load_steps=183 format=2]
+[gd_scene load_steps=181 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
-[ext_resource path="res://interface/fonts/montserrat_eb_128.tres" type="DynamicFont" id=2]
-[ext_resource path="res://interface/fonts/montserrat_eb_64.tres" type="DynamicFont" id=3]
 [ext_resource path="res://addons/SimpleSampler/sample_resource.gd" type="Script" id=4]
 [ext_resource path="res://addons/SimpleSampler/multisampler.gd" type="Script" id=5]
 [ext_resource path="res://ogg/021.ogg" type="AudioStream" id=6]
@@ -634,32 +632,16 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Container"]
-margin_left = 376.0
-margin_top = 840.0
-margin_right = 704.0
-margin_bottom = 1080.0
-
-[node name="Touches" type="Label" parent="Container/VBoxContainer"]
-margin_right = 328.0
-margin_bottom = 157.0
-custom_fonts/font = ExtResource( 2 )
-text = "999"
-align = 1
-
-[node name="Label" type="Label" parent="Container/VBoxContainer"]
-margin_top = 161.0
-margin_right = 328.0
-margin_bottom = 240.0
-custom_fonts/font = ExtResource( 3 )
-text = "TOUCHES"
-align = 1
+margin_left = 540.0
+margin_top = 960.0
+margin_right = 540.0
+margin_bottom = 960.0
 
 [node name="Multisampler" type="AudioStreamPlayer" parent="."]
 volume_db = -10.0
 script = ExtResource( 5 )
 samples = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ]
 attack = 0.01
-sustain = 1.0
 release = 0.2
 max_notes = 4
 

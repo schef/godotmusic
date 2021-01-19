@@ -13,6 +13,7 @@ var timer: Timer;
 
 var in_attack := false
 var in_release := false
+var current_midi := 60
 
 func _ready():
 	# Calculate samples' values and sort them
@@ -33,13 +34,16 @@ func _ready():
 		timer.one_shot = true;
 		timer.connect("timeout", self, "_end_sustain")
 
-func play_note(note: String, octave: int = 4):
+#func play_note(note: String, octave: int = 4):
+func play_note(midi: int):
 	if samples.size() == 0:
 		return
 
 	# look for the closest note in the samples
-	var calculator: NoteValueCalculator = get_node("/root/NoteValue")
-	var note_val := calculator.get_note_value(note, octave)
+	#var calculator: NoteValueCalculator = get_node("/root/NoteValue")
+	#var note_val := calculator.get_note_value(note, octave)
+	var note_val := midi
+	current_midi = midi
 	var idx := 0
 	var sample: NoteSample = samples[0]
 	var diff := abs(note_val - sample.value)
@@ -137,3 +141,6 @@ func _reset_envelope():
 		volume_db = max_volume
 	else:
 		volume_db = -50
+
+func get_midi() -> int:
+	return current_midi
