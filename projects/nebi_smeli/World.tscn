@@ -136,5 +136,5 @@ stream = ExtResource( 6 )
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
 
-[node name="TouchVisual" type="Node2D" parent="."]
+[node name="TouchController" type="Node2D" parent="."]
 script = ExtResource( 9 )
