@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gipsy_chip_tune.wav-ce4aea54c5695fba4f45c1b1d6aee73c.sample"
+
+[deps]
+
+source_file="res://gipsy_chip_tune.wav"
+dest_files=[ "res://.import/gipsy_chip_tune.wav-ce4aea54c5695fba4f45c1b1d6aee73c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

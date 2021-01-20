@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/beer_open.ogg-dff39cf02eadf69d8ec498047de3ebcc.oggstr"
+
+[deps]
+
+source_file="res://beer_open.ogg"
+dest_files=[ "res://.import/beer_open.ogg-dff39cf02eadf69d8ec498047de3ebcc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
