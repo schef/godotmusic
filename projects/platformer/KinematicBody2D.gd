@@ -5,6 +5,10 @@ const GRAVITY = 20
 const SPEED = 200
 const JUMP_HEIGHT = 600
 var motion = Vector2()
+var screenSize = Vector2()
+
+func _ready():
+	screenSize = get_viewport().get_visible_rect().size
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -22,4 +26,7 @@ func _physics_process(delta):
 		
 	motion = move_and_slide(motion, UP)
 
-	if get_position_in_parent()
+	if (position[1] >= screenSize.y):
+		position[1] = 0
+	elif (position[1] <= 0):
+		position[1] = screenSize.y		
