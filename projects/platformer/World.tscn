@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/2021-01-27_08.56.08.png" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
-[ext_resource path="res://assets/2021-01-27_08.51.11.png" type="Texture" id=3]
+[ext_resource path="res://assets/PikPng.com_8-bit-mario-png_1696159.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -20,7 +20,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Player"]
-scale = Vector2( 2, 2 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

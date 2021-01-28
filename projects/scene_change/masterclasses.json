@@ -1,0 +1,85 @@
+{
+    "title": "Apsolute Pitch Trainer",
+    "subtitle": "based on David Lucas Burge",
+    "version": "v0.0.1",
+    "masterclasses": [
+        {
+            "group": 0,
+            "description": "This masterclass is for testing only. It does not exists in DLB colection.",
+            "practices": [
+                {
+                    "practice": 1,
+                    "description": "Example pitch naming drill. This practice will play a C major chord and than a black tone. You should name the black tone.",
+                    "maxHits": 20,
+                    "practiceType" : "PITCH_NAMING_DRILL",
+                    "practiceBatch" : [
+                        {"id" : 0, "question" : [["c'", "e'", "g'"], ["cis'"]], "anwser" : [["cis'"]]},
+                        {"id" : 1, "question" : [["c'", "e'", "g'"], ["es'"]], "anwser" : [["es'"]]},
+                        {"id" : 2, "question" : [["c'", "e'", "g'"], ["fis'"]], "anwser" : [["fis'"]]},
+                        {"id" : 3, "question" : [["c'", "e'", "g'"], ["as'"]], "anwser" : [["as'"]]},
+                        {"id" : 4, "question" : [["c'", "e'", "g'"], ["b'"]], "anwser" : [["b'"]]}
+                    ]
+                },
+                {
+                    "practice": 2,
+                    "description": "Example pitch identify drill. This practice will play 2 white tones separated by 1. You should sing the lower one.",
+                    "maxHits": 20,
+                    "practiceType" : "PITCH_IDENTIFY_DRILL",
+                    "practiceBatch" : [
+                        {"id" : 0, "question" : [["c'", "e'"]], "anwser" : [["c'"]]},
+                        {"id" : 1, "question" : [["d'", "f'"]], "anwser" : [["d'"]]},
+                        {"id" : 2, "question" : [["e'", "g'"]], "anwser" : [["e'"]]},
+                        {"id" : 3, "question" : [["f'", "a'"]], "anwser" : [["f'"]]},
+                        {"id" : 4, "question" : [["g'", "h'"]], "anwser" : [["g'"]]},
+                        {"id" : 5, "question" : [["a'", "c''"]], "anwser" : [["a'"]]},
+                        {"id" : 6, "question" : [["h'", "d''"]], "anwser" : [["h'"]]},
+                        {"id" : 7, "question" : [["c''", "e''"]], "anwser" : [["c''"]]}
+                    ]
+                },
+                {
+                    "practice": 3,
+                    "description": "Example meditation. This practice will give you a tone to sing. Check if you got it right.",
+                    "maxHits": 20,
+                    "practiceType" : "MEDITATION",
+                    "practiceBatch" : [
+                        {"id" : 0, "question" : [["c'"]], "anwser" : [["c'"]]},
+                        {"id" : 1, "question" : [["d'"]], "anwser" : [["d'"]]},
+                        {"id" : 2, "question" : [["e'"]], "anwser" : [["e'"]]}
+                    ]
+                },
+                {
+                    "practice": 4,
+                    "description": "Audio book player. Here you will listen to David Lucas Burge audio book.",
+                    "maxHits": 20,
+                    "practiceType" : "PLAYER",
+                    "filename" : "masterclass_00_04.mp3"
+                },
+                {
+                    "practice": 5,
+                    "description": "Comments on the masterclass.",
+                    "practiceType" : "COMMENTS",
+                    "text" : "In this section i will put my comments on the audio masterclass. I hope this will help you grasp everything together and better organize yourself. More comments to come."
+                }
+            ]
+        },
+        {
+            "group": 5,
+            "description": "TODO",
+            "practices": [
+                {
+                    "practice": 1,
+                    "description": "Any two white tones separated by one. Listen and Sing.",
+                    "maxHits": 20,
+                    "practiceType" : "PITCH_IDENTIFY_DRILL",
+                    "practiceBatch" : [
+                        {"id" : 0, "question" : [["c'", "e'"]], "anwser" : [["c'"]]},
+                        {"id" : 1, "question" : [["c'", "e'"], ["d'", "f'"], ["e'", "g'"]], "anwser" : [["c'"]]},
+                        {"id" : 2, "question" : [["c'", "e'"], ["c'"]], "anwser" : [["c'"]]},
+                        {"id" : 3, "question" : [["c'"]], "anwser" : [["c'"]]},
+                        {"id" : 4, "question" : [["c'", "e'"]], "anwser" : [["c'"]]}
+                    ]
+                }
+            ]
+        }
+    ]
+}

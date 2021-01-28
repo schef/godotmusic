@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Scene Change"
-run/main_scene="res://first_screen.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://scenes/first_screen.tscn"
+config/icon="res://assets/icon.png"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
 
 [display]
 
