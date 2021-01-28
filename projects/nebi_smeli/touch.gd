@@ -3,8 +3,7 @@ extends Node2D
 var screenSize: Vector2
 var leftVerticalLine: float
 var rightVerticalLine: float
-var upHorizontalLine: float
-var downHorizontalLine: float
+var horizontalLine: float
 
 enum FingerAction {PRESS, RELEASE, DRAG}
 var fingerDict = {
@@ -16,12 +15,10 @@ func _draw():
 	screenSize = get_viewport().get_visible_rect().size	
 	leftVerticalLine = screenSize.x * 0.125
 	rightVerticalLine = screenSize.x * 0.875
-	upHorizontalLine = screenSize.y * 0.5
-	downHorizontalLine = screenSize.y * 0.75
-	draw_line(Vector2(leftVerticalLine,upHorizontalLine), Vector2(leftVerticalLine, screenSize.y), Color(255, 0, 0), 3)
-	draw_line(Vector2(rightVerticalLine,upHorizontalLine), Vector2(rightVerticalLine, screenSize.y), Color(255, 0, 0), 3)
-	draw_line(Vector2(0,upHorizontalLine), Vector2(screenSize.x, upHorizontalLine), Color(255, 0, 0), 3)
-	draw_line(Vector2(leftVerticalLine,downHorizontalLine), Vector2(rightVerticalLine, downHorizontalLine), Color(255, 0, 0), 3)
+	horizontalLine = screenSize.y * 0.75
+	draw_line(Vector2(leftVerticalLine,0), Vector2(leftVerticalLine, screenSize.y), Color(255, 0, 0), 3)
+	draw_line(Vector2(rightVerticalLine,0), Vector2(rightVerticalLine, screenSize.y), Color(255, 0, 0), 3)
+	draw_line(Vector2(leftVerticalLine,horizontalLine), Vector2(rightVerticalLine, horizontalLine), Color(255, 0, 0), 3)
 	
 func _ready():
 	update()
@@ -52,11 +49,10 @@ func get_touch_location(position: Vector2) -> String:
 		elif position.x < (leftVerticalLine):
 			return("move_left")
 		else:
-			if position.y > (upHorizontalLine) and position.y <= (downHorizontalLine):
+			if position.y < (horizontalLine):
 				return("move_up")
-			elif position.y > downHorizontalLine:
+			else:
 				return("move_down")
-		return ""
 				
 func _input (event):
 	var screenSize = get_viewport().get_visible_rect().size
