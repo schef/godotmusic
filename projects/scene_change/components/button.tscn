@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Button" type="Button"]
+margin_right = 840.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 150 )
+mouse_filter = 1
+text = "Button"

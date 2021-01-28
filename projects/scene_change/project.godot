@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Scene Change"
-run/main_scene="res://scenes/first_screen.tscn"
+run/main_scene="res://scenes/masterclasses.tscn"
 config/icon="res://icon.png"
 
 [autoload]

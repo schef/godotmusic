@@ -5,7 +5,7 @@
 
 [sub_resource type="Theme" id=1]
 
-[node name="ColorRect" type="ColorRect"]
+[node name="Display" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 2 )
@@ -33,7 +33,10 @@ margin_bottom = 1800.0
 
 [node name="Header" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 margin_right = 840.0
-margin_bottom = 163.0
+margin_bottom = 119.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer/Header"]
 margin_right = 840.0
@@ -49,39 +52,25 @@ theme = ExtResource( 1 )
 text = "Subtitle"
 align = 1
 
-[node name="Version" type="Label" parent="MarginContainer/VBoxContainer/Header"]
+[node name="HFill" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 margin_top = 123.0
 margin_right = 840.0
-margin_bottom = 163.0
-theme = ExtResource( 1 )
-text = "Version"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HFill" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 167.0
-margin_right = 840.0
-margin_bottom = 367.0
+margin_bottom = 323.0
 custom_constants/margin_bottom = 200
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 371.0
+margin_top = 327.0
 margin_right = 840.0
 margin_bottom = 1680.0
 size_flags_vertical = 3
 theme = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Buttons" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="ScrollArray" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
 margin_right = 840.0
-margin_bottom = 1309.0
+margin_bottom = 1353.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 50
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/Buttons"]
-margin_right = 840.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 0, 150 )
-text = "Masterclass 1"
