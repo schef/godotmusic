@@ -49,4 +49,5 @@ func on_button_pressed(index: int):
 		Global.reset_group_index()
 		get_tree().change_scene("res://scenes/first_screen.tscn")
 	else:
-		pass
+		Global.set_practice_index(index)
+		get_tree().change_scene("res://scenes/PITCH_NAMING_DRILL.tscn")

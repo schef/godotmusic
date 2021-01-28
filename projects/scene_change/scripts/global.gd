@@ -24,8 +24,11 @@ func get_version():
 func get_masterclasses():
 	return masterclasses["masterclasses"]
 
-func get_masterclass(index: int):
-	return masterclasses["masterclasses"][index]
+func get_masterclass(group_index: int):
+	return masterclasses["masterclasses"][group_index]
+
+func get_practice(group_index: int, practice_index: int):
+	return masterclasses["masterclasses"][group_index]["practices"][practice_index]
 
 func get_group_index():
 	return group_index
@@ -36,7 +39,7 @@ func set_group_index(index: int):
 func reset_group_index():
 	group_index = null
 	
-func set_practice(index: int):
+func set_practice_index(index: int):
 	practice_index = index
 	
 func get_practice_index():
