@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="MultipleArray" type="HBoxContainer"]
+margin_right = 840.0
+custom_constants/separation = 50
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
