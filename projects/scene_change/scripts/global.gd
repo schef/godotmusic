@@ -5,6 +5,7 @@ var group_index = null
 var practice_index = null
 
 func _ready():
+	print("ready in global")
 	var file = File.new()
 	file.open("res://masterclasses.json", file.READ)
 	var json = file.get_as_text()
