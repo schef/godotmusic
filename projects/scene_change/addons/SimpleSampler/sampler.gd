@@ -9,7 +9,7 @@ export(float) var release := -1.0
 
 onready var max_volume := volume_db
 var tween: Tween
-var timer: Timer;
+var timer: Timer
 
 var in_attack := false
 var in_release := false
@@ -17,10 +17,10 @@ var current_midi := 60
 
 func _ready():
 	# Calculate samples' values and sort them
-	var calculator: NoteValueCalculator = get_node("/root/NoteValue")
-	for s in samples:
-		var sample: NoteSample = s
-		sample.initValue(calculator)
+	#var calculator: NoteValueCalculator = get_node("/root/NoteValue")
+	#for s in samples:
+	#	var sample: NoteSample = s
+	#	sample.initValue(calculator)
 	samples.sort_custom(self, "_compare_samples")
 
 	# Create tween & timer for sustain and release

@@ -1,7 +1,7 @@
 extends Sampler
 class_name Multisampler
 
-export(int) var max_notes:= 1
+export(int) var max_notes:= 4
 
 var samplers := []
 var next_available = 0
@@ -28,7 +28,7 @@ func play_note(midi: int):
 	sampler.play_note(midi)
 	next_available = (next_available + 1) % max_notes
 
-func stop():
+func stop_all():
 	for s in samplers:
 		var sampler: Sampler = s
 		sampler.stop()
@@ -36,11 +36,11 @@ func stop():
 func stop_note(midi: int):
 	for s in samplers:
 		var sampler: Sampler = s
-		if (sampler.get_midi() == midi):		
+		if (sampler.get_midi() == midi):
 			sampler.stop()
 
 # Stop the note with a release
-func release():
+func release_all():
 	for s in samplers:
 		var sampler: Sampler = s
 		sampler.release()

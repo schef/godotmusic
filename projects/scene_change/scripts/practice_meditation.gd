@@ -49,5 +49,7 @@ func on_button_pressed(index: int):
 		ElementIndex.BACK:
 			Global.reset_practice_index()
 			get_tree().change_scene("res://scenes/single_masterclass.tscn")
+		ElementIndex.PLAY_C:
+			AudioPlayer.playMultipleNotesHarmonicly(["c'", "e'", "g'"])
 		_:
 			set_label(ElementIndex.CHALLENGE_STATUS, str(index))
