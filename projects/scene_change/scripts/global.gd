@@ -3,6 +3,7 @@ extends Node
 var masterclasses
 var group_index = null
 var practice_index = null
+var rng
 
 func _ready():
 	print("ready in global")
@@ -11,8 +12,9 @@ func _ready():
 	var json = file.get_as_text()
 	masterclasses = JSON.parse(json).result
 	file.close()
-	pass # Replace with function body.
-
+	rng = RandomNumberGenerator.new()
+	rng.randomize()
+	
 func get_title():
 	return masterclasses["title"]
 
@@ -48,3 +50,6 @@ func get_practice_index():
 
 func reset_practice_index():
 	practice_index = null
+
+func get_random_number_in_range(minNum: int, maxNum: int):
+	return rng.randi_range(minNum, maxNum)

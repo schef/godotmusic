@@ -28,11 +28,11 @@ func _ready():
 	re.compile('[\',]')
 
 func isMidiPitch(midi, pitch):
-	pitch = re.sub(pitch, '')
+	pitch = re.sub(pitch, '', true)
 	return midi % 12 == pitchMidiBase[pitch]
 
 func getPitchBase(pitch):
-	pitch = re.sub(pitch, '')
+	pitch = re.sub(pitch, '', true)
 	return pitch
 
 func getOctaveFromPitch(pitch):
@@ -46,7 +46,7 @@ func getOctaveFromPitch(pitch):
 
 func getMidiFromPitch(pitch):
 	var octave = getOctaveFromPitch(pitch)
-	pitch = re.sub(pitch, '')
+	pitch = re.sub(pitch, '', true)
 	return pitchMidiBase[pitch] + octave
 
 func getOctaveFromMidi(midi):

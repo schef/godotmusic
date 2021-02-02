@@ -54,16 +54,18 @@ func playMultipleNotesMelodicly(pitchList):
 		currentTime = currentTime + NOTE_DURATION
 		noteActionQueue.append(n)
 
-func playMultipleNotesHarmonicly( pitchList):
+func playMultipleNotesHarmonicly(pitchList):
 	print("playMultipleNotesHarmonicly", pitchList)
 	var currentTime = getMillis()
-	for pitch in pitchList:
-		var n = NoteAction.new()
-		n.midi = PitchParser.getMidiFromPitch(pitch)
-		n.status = false
-		n.startTimestamp = currentTime
-		n.timeout = NOTE_DURATION
-		noteActionQueue.append(n)
+	for subPitchList in pitchList:
+		for pitch in subPitchList:
+			var n = NoteAction.new()
+			n.midi = PitchParser.getMidiFromPitch(pitch)
+			n.status = false
+			n.startTimestamp = currentTime
+			n.timeout = NOTE_DURATION
+			noteActionQueue.append(n)
+		currentTime += NOTE_DURATION
 
 func allNotesOff():
 	release_all()
