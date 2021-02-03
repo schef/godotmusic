@@ -55,10 +55,10 @@ func init():
 func init_header():
 	pass
 
-func init_buttons():
+func init_scroll_array():
 	pass
 
 func _ready():
 	init()
 	init_header()
-	init_buttons()
+	init_scroll_array()

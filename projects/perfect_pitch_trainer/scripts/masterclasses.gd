@@ -4,7 +4,7 @@ func init_header():
 	title.text = Global.get_title()
 	subtitle.text = Global.get_subtitle()
 
-func init_buttons():
+func init_scroll_array():
 	var buttonIndex = 0
 	for masterclass in Global.get_masterclasses():
 		var text = "Masterclass " + str(masterclass["group"])

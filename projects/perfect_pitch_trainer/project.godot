@@ -38,7 +38,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Scene Change"
+config/name="Perfect Pitch Trainer"
 run/main_scene="res://scenes/masterclasses.tscn"
 config/icon="res://icon.png"
 

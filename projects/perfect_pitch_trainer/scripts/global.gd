@@ -53,3 +53,6 @@ func reset_practice_index():
 
 func get_random_number_in_range(minNum: int, maxNum: int):
 	return rng.randi_range(minNum, maxNum)
+
+func get_random_practice_batch(var practice):
+	return practice["practiceBatch"][Global.get_random_number_in_range(0, len(practice["practiceBatch"]) - 1)]

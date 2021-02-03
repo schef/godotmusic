@@ -14,6 +14,8 @@ enum ElementIndex {
 	CHALLENGE_STATUS,
 	SCORE,
 	SCORE_STATUS,
+	DEBUG_LABEL,
+	DEBUG
 	}
 
 func get_random_practice_batch():
@@ -23,16 +25,27 @@ func show_score():
 	set_label(ElementIndex.SCORE_STATUS, "%d/%d" % [score, practice["maxHits"]])
 
 func show_question():
-	set_label(ElementIndex.CHALLENGE_STATUS, str(batch_select["question"]))
+	var questions = []
+	for batch in batch_select["question"]:
+		questions.append(PoolStringArray(batch).join(", "))
+	var question = PoolStringArray(questions).join("\n")
+	set_label(ElementIndex.CHALLENGE_STATUS, question)
 
 func play_question():
 	MidiPlayer.playMultipleNotesHarmonicly(batch_select["question"])
 
 func play_anwser():
-	MidiPlayer.playMultipleNotesHarmonicly(batch_select["question"])
+	MidiPlayer.playMultipleNotesHarmonicly(batch_select["anwser"])
+
+func show_debug():
+	set_label(ElementIndex.DEBUG_LABEL, str(batch_select))
+
+func hide_debug():
+	set_label(ElementIndex.DEBUG_LABEL, "")
 
 func next_batch():
 	batch_select = get_random_practice_batch()
+	hide_debug()
 	show_score()
 	show_question()
 	
@@ -46,7 +59,7 @@ func init_header():
 	title.text = "Practice %d.%d" % [Global.get_group_index(), Global.get_practice_index()]
 	subtitle.text = practice["description"]
 
-func init_buttons():
+func init_scroll_array():
 	scroll_array.add_child(generate_button(ElementIndex.BACK, "<-", "on_button_pressed"))
 	scroll_array.add_child(generate_hbox([
 		generate_label(ElementIndex.CHALLENGE, "Sing"),
@@ -61,9 +74,16 @@ func init_buttons():
 		generate_button(ElementIndex.RESTART, "Restart", "on_button_pressed"),
 		]))
 	scroll_array.add_child(generate_hbox([
+		generate_button(ElementIndex.DEBUG, "Debug", "on_button_pressed")
+		]))
+	scroll_array.add_child(generate_hbox([
 		generate_label(ElementIndex.SCORE, "Score"),
 		generate_label(ElementIndex.SCORE_STATUS, "3/20"),
 		]))
+	var debug_label = generate_label(ElementIndex.DEBUG_LABEL, "")
+	debug_label.theme = load("res://assets/font_small.tres")
+	debug_label.autowrap = true
+	scroll_array.add_child(debug_label)
 
 func on_button_pressed(index: int):
 	match index:
@@ -80,5 +100,5 @@ func on_button_pressed(index: int):
 		ElementIndex.RESTART:
 			score = 0
 			next_batch()
-		_:
-			set_label(ElementIndex.CHALLENGE_STATUS, str(index))
+		ElementIndex.DEBUG:
+			show_debug()
