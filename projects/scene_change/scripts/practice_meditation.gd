@@ -23,13 +23,13 @@ func show_score():
 	set_label(ElementIndex.SCORE_STATUS, "%d/%d" % [score, practice["maxHits"]])
 
 func show_question():
-	set_label(ElementIndex.CHALLENGE_STATUS, str(batch_select["question"][0]))
+	set_label(ElementIndex.CHALLENGE_STATUS, str(batch_select["question"]))
 
 func play_question():
-	MidiPlayer.playMultipleNotesHarmonicly(batch_select["question"][0])
+	MidiPlayer.playMultipleNotesHarmonicly(batch_select["question"])
 
 func play_anwser():
-	MidiPlayer.playMultipleNotesHarmonicly(batch_select["question"][0])
+	MidiPlayer.playMultipleNotesHarmonicly(batch_select["question"])
 
 func next_batch():
 	batch_select = get_random_practice_batch()
@@ -77,7 +77,8 @@ func on_button_pressed(index: int):
 			next_batch()
 		ElementIndex.PLAY_C:
 			#MidiPlayer.playMultipleNotesHarmonicly([["c'"]])
-			MidiPlayer.playMultipleNotesMelodicly([["c'"], ["g'", "a'"], ["c''"]])
+			#MidiPlayer.playMultipleNotesHarmonicly([["c'"], ["c,", "c'", "c''"]])
+			MidiPlayer.playMultipleNotesMelodicly([["c'"], ["c,", "c'", "c''"]])
 		ElementIndex.RESTART:
 			score = 0
 			next_batch()
