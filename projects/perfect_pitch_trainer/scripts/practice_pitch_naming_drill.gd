@@ -56,10 +56,11 @@ func on_key_press(pitchList):
 	if (len(pitchList) == len(get_linear_anwser_pitch_list())):
 		if (check_pitch_match(pitchList)):
 			score += 1
+			keyboard.clear_text(true)
 			next_batch()
 		else:
+			keyboard.clear_text(false)
 			score = 0
-		keyboard.clear_text()
 		refresh_score()
 	
 func init():

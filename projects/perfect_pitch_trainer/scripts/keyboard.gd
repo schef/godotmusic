@@ -64,6 +64,6 @@ func _process(delta):
 func register_on_key_press_callback(fun_obj, fun_name):
 	button_callback = funcref(fun_obj, fun_name)
 
-func clear_text():
+func clear_text(status):
+	textbox.text = "Good" if status else "Wrong"
 	pitchList.clear()
-	update_text()
