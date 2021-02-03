@@ -3,6 +3,7 @@ extends Node
 var pitchList = []
 var textbox
 var init = false
+var button_callback: FuncRef = null
 
 func find_node_by_name(root, name):
 	if(root.get_name() == name): return root
@@ -39,6 +40,8 @@ func _ready():
 func update_text():
 	var text = PoolStringArray(pitchList).join(", ")
 	textbox.text = text
+	if (button_callback != null):
+		button_callback.call_func(pitchList)
 
 func on_key_pressed(pitch: String):
 	pitchList.append(pitch)
@@ -57,3 +60,6 @@ func init():
 		
 func _process(delta):
 	init()
+
+func register_on_key_press_callback(fun_obj, fun_name):
+	button_callback = funcref(fun_obj, fun_name)

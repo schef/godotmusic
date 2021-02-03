@@ -36,11 +36,15 @@ func next_batch():
 	hide_debug()
 	refresh_score()
 	play_question()
+
+func on_key_press(pitchList):
+	print(pitchList)
 	
 func init():
 	practice = Global.get_practice(Global.get_group_index(), Global.get_practice_index())
 	
 func _ready():
+	find_node_by_name(get_tree().get_root(), "Keyboard").register_on_key_press_callback(self, "on_key_press")
 	next_batch()
 
 func init_header():
