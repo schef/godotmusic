@@ -76,9 +76,7 @@ func on_button_pressed(index: int):
 			score += 1
 			next_batch()
 		ElementIndex.PLAY_C:
-			#MidiPlayer.playMultipleNotesHarmonicly([["c'"]])
-			#MidiPlayer.playMultipleNotesHarmonicly([["c'"], ["c,", "c'", "c''"]])
-			MidiPlayer.playMultipleNotesMelodicly([["c'"], ["c,", "c'", "c''"]])
+			MidiPlayer.playMultipleNotesHarmonicly([["c'"]])
 		ElementIndex.RESTART:
 			score = 0
 			next_batch()
