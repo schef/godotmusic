@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://components/key_black.tscn" type="PackedScene" id=1]
+[ext_resource path="res://components/key_white.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/font_small.tres" type="Theme" id=3]
+[ext_resource path="res://scripts/keyboard.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0627451, 0.0470588, 0.0352941, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.803922, 0.752941, 0.682353, 1 )
+
+[node name="Keyboard" type="VBoxContainer"]
+margin_right = 840.0
+margin_bottom = 458.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row1" type="HBoxContainer" parent="."]
+margin_right = 841.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+
+[node name="KEY_Eb" parent="Row1" instance=ExtResource( 1 )]
+custom_styles/normal = SubResource( 1 )
+text = "Eb"
+
+[node name="KEY_E" parent="Row1" instance=ExtResource( 2 )]
+margin_left = 169.0
+margin_right = 334.0
+custom_styles/normal = SubResource( 2 )
+text = "E"
+
+[node name="TEXTBOX" type="Button" parent="Row1"]
+margin_left = 338.0
+margin_right = 841.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+text = "Press to clear"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row2" type="HBoxContainer" parent="."]
+margin_top = 154.0
+margin_right = 841.0
+margin_bottom = 304.0
+size_flags_horizontal = 3
+
+[node name="KEY_Bb" parent="Row2" instance=ExtResource( 1 )]
+custom_styles/normal = SubResource( 1 )
+text = "Bb"
+
+[node name="KEY_H" parent="Row2" instance=ExtResource( 2 )]
+margin_left = 169.0
+margin_right = 334.0
+custom_styles/normal = SubResource( 2 )
+text = "H"
+
+[node name="KEY_C" parent="Row2" instance=ExtResource( 2 )]
+margin_left = 338.0
+margin_right = 503.0
+custom_styles/normal = SubResource( 2 )
+
+[node name="KEY_C#" parent="Row2" instance=ExtResource( 1 )]
+margin_left = 507.0
+margin_right = 672.0
+custom_styles/normal = SubResource( 1 )
+
+[node name="KEY_D" parent="Row2" instance=ExtResource( 2 )]
+margin_left = 676.0
+margin_right = 841.0
+custom_styles/normal = SubResource( 2 )
+text = "D"
+
+[node name="Row3" type="HBoxContainer" parent="."]
+margin_top = 308.0
+margin_right = 841.0
+margin_bottom = 458.0
+size_flags_horizontal = 3
+
+[node name="KEY_F" parent="Row3" instance=ExtResource( 2 )]
+margin_right = 165.0
+custom_styles/normal = SubResource( 2 )
+text = "F"
+
+[node name="KEY_F#" parent="Row3" instance=ExtResource( 1 )]
+margin_left = 169.0
+margin_right = 334.0
+custom_styles/normal = SubResource( 1 )
+text = "F#"
+
+[node name="KEY_G" parent="Row3" instance=ExtResource( 2 )]
+margin_left = 338.0
+margin_right = 503.0
+custom_styles/normal = SubResource( 2 )
+text = "G"
+
+[node name="KEY_Ab" parent="Row3" instance=ExtResource( 1 )]
+margin_left = 507.0
+margin_right = 672.0
+custom_styles/normal = SubResource( 1 )
+text = "Ab"
+
+[node name="KEY_A" parent="Row3" instance=ExtResource( 2 )]
+margin_left = 676.0
+margin_right = 841.0
+custom_styles/normal = SubResource( 2 )
+text = "A"

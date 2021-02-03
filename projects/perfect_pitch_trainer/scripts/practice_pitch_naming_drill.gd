@@ -6,8 +6,7 @@ var score = 0
 
 enum ElementIndex {
 	BACK = -1
-	CLEAR = 0,
-	NEXT,
+	NEXT = 0,
 	PLAY_C,
 	REPEAT,
 	RESTART,
@@ -15,7 +14,6 @@ enum ElementIndex {
 	DEBUG_LABEL,
 	SCORE,
 	SCORE_STATUS,
-	TEXTBOX
 	}
 
 func refresh_score():
@@ -33,13 +31,9 @@ func show_debug():
 func hide_debug():
 	set_label(ElementIndex.DEBUG_LABEL, "")
 
-func clear_text():
-	set_label(ElementIndex.TEXTBOX, "")
-
 func next_batch():
 	batch_select = Global.get_random_practice_batch(practice)
 	hide_debug()
-	clear_text()
 	refresh_score()
 	play_question()
 	
@@ -58,12 +52,8 @@ func init_header():
 
 func init_scroll_array():
 	scroll_array.add_child(generate_button(ElementIndex.BACK, "<-", "on_button_pressed"))
-	scroll_array.add_child(generate_hbox([
-		generate_label(ElementIndex.TEXTBOX, "c f a g")
-		]))
-	scroll_array.add_child(generate_hbox([
-		generate_button(ElementIndex.CLEAR, "Clear", "on_button_pressed"),
-		]))
+	var keyboard = load("res://components/keyboard.tscn").instance()
+	scroll_array.add_child(keyboard)
 	scroll_array.add_child(generate_hbox([
 		generate_button(ElementIndex.PLAY_C, "Play C", "on_button_pressed"),
 		generate_button(ElementIndex.REPEAT, "Repeat", "on_button_pressed"),
@@ -86,8 +76,6 @@ func on_button_pressed(index: int):
 		ElementIndex.BACK:
 			Global.reset_practice_index()
 			get_tree().change_scene("res://scenes/single_masterclass.tscn")
-		ElementIndex.CLEAR:
-			clear_text()
 		ElementIndex.REPEAT:
 			play_question()
 		ElementIndex.PLAY_C:
