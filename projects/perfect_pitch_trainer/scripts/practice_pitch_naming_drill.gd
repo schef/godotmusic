@@ -3,6 +3,7 @@ extends "res://scripts/template.gd"
 var practice
 var batch_select
 var score = 0
+var keyboard
 
 enum ElementIndex {
 	BACK = -1
@@ -31,20 +32,42 @@ func show_debug():
 func hide_debug():
 	set_label(ElementIndex.DEBUG_LABEL, "")
 
+func get_linear_anwser_pitch_list():
+	var pitchList = []
+	for b in batch_select["anwser"]:
+		for p in b:
+			pitchList.append(PitchParser.getPitchBase(p))
+	return pitchList
+
 func next_batch():
 	batch_select = Global.get_random_practice_batch(practice)
 	hide_debug()
 	refresh_score()
 	play_question()
 
+func check_pitch_match(pitchList):
+	var anwserList = get_linear_anwser_pitch_list()
+	for i in len(pitchList):
+		if pitchList[i] != anwserList[i]:
+			return false
+	return true
+
 func on_key_press(pitchList):
-	print(pitchList)
+	if (len(pitchList) == len(get_linear_anwser_pitch_list())):
+		if (check_pitch_match(pitchList)):
+			score += 1
+			next_batch()
+		else:
+			score = 0
+		keyboard.clear_text()
+		refresh_score()
 	
 func init():
 	practice = Global.get_practice(Global.get_group_index(), Global.get_practice_index())
 	
 func _ready():
-	find_node_by_name(get_tree().get_root(), "Keyboard").register_on_key_press_callback(self, "on_key_press")
+	keyboard = find_node_by_name(get_tree().get_root(), "Keyboard")
+	keyboard.register_on_key_press_callback(self, "on_key_press")
 	next_batch()
 
 func init_header():
