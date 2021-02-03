@@ -56,7 +56,10 @@ func _ready():
 	next_batch()
 
 func init_header():
-	title.text = "Practice %d.%d" % [Global.get_group_index(), Global.get_practice_index()]
+	var masterclass = Global.get_masterclass(Global.get_group_index())
+	var group_id = masterclass["group"]
+	var practice_id = practice["practice"]
+	title.text = "Practice %d.%d" % [group_id, practice_id]
 	subtitle.text = practice["description"]
 
 func init_scroll_array():
