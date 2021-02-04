@@ -1,7 +1,6 @@
 extends "res://scripts/template.gd"
 
-var practice
-var batch_select
+var batch
 var score = 0
 
 enum ElementIndex {
@@ -18,49 +17,40 @@ enum ElementIndex {
 	DEBUG
 	}
 
-func get_random_practice_batch():
-	return practice["practiceBatch"][Global.get_random_number_in_range(0, len(practice["practiceBatch"]) - 1)]
-
 func show_score():
-	set_label(ElementIndex.SCORE_STATUS, "%d/%d" % [score, practice["maxHits"]])
+	set_label(ElementIndex.SCORE_STATUS, "%d/%d" % [score, Global.get_field("maxHits")])
 
 func show_question():
 	var questions = []
-	for batch in batch_select["question"]:
-		questions.append(PoolStringArray(batch).join(", "))
+	for b in Global.get_field_from_object(batch, "question"):
+		questions.append(PoolStringArray(b).join(", "))
 	var question = PoolStringArray(questions).join("\n")
 	set_label(ElementIndex.CHALLENGE_STATUS, question)
 
 func play_question():
-	MidiPlayer.playMultipleNotesHarmonicly(batch_select["question"])
+	MidiPlayer.playMultipleNotesHarmonicly(Global.get_field_from_object(batch, "question"))
 
 func play_anwser():
-	MidiPlayer.playMultipleNotesHarmonicly(batch_select["anwser"])
+	MidiPlayer.playMultipleNotesHarmonicly(Global.get_field_from_object(batch, "anwser"))
 
 func show_debug():
-	set_label(ElementIndex.DEBUG_LABEL, str(batch_select))
+	set_label(ElementIndex.DEBUG_LABEL, str(batch))
 
 func hide_debug():
 	set_label(ElementIndex.DEBUG_LABEL, "")
 
 func next_batch():
-	batch_select = get_random_practice_batch()
+	batch = Global.get_random_practice_batch()
 	hide_debug()
 	show_score()
 	show_question()
 	
-func init():
-	practice = Global.get_practice(Global.get_group_index(), Global.get_practice_index())
-
 func _ready():
 	next_batch()
 
 func init_header():
-	var masterclass = Global.get_masterclass(Global.get_group_index())
-	var group_id = masterclass["group"]
-	var practice_id = practice["practice"]
-	title.text = "Practice %d.%d" % [group_id, practice_id]
-	subtitle.text = practice["description"]
+	title.text = Global.get_title()
+	subtitle.text = Global.get_description()
 
 func init_scroll_array():
 	scroll_array.add_child(generate_button(ElementIndex.BACK, "<-", "on_button_pressed"))
@@ -91,8 +81,9 @@ func init_scroll_array():
 func on_button_pressed(index: int):
 	match index:
 		ElementIndex.BACK:
+			Global.set_score(score)
 			Global.reset_practice_index()
-			get_tree().change_scene("res://scenes/single_masterclass.tscn")
+			get_tree().change_scene("res://scenes/masterclass.tscn")
 		ElementIndex.CHECK:
 			play_anwser()
 		ElementIndex.NEXT:

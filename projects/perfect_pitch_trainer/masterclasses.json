@@ -1,27 +1,44 @@
 {
     "title": "Apsolute Pitch Trainer",
-    "subtitle": "based on David Lucas Burge",
+    "description": "based on David Lucas Burge",
     "version": "v0.0.1",
     "masterclasses": [
         {
-            "group": 0,
+            "id": 0,
+	    "title" : "Tests",
             "description": "This masterclass is for testing only. It does not exists in DLB colection.",
             "practices": [
                 {
-                    "practice": 1,
-                    "description": "Example pitch naming drill. This practice will play a C major chord and than a black tone. You should name the black tone.",
+                    "id": 0,
+		    "title": "Listen to masterclass",
+                    "description": "Audio book player. Here you will listen to David Lucas Burge audio book.",
+                    "maxHits": 1,
+                    "practiceType" : "PLAYER",
+                    "link" : "https://youtu.be/l4CBhHD2kOM"
+                },
+                {
+                    "id": 1,
+		    "title": "Comment",
+                    "description": "Comments on the masterclass.",
+                    "maxHits": 1,
+                    "practiceType" : "COMMENTS",
+                    "text" : "In this section i will put my comments on the audio masterclass. I hope this will help you grasp everything together and better organize yourself. More comments to come.\n[b]bold[i]bold italic[/i][/b][i]italic[/i]\n[u]Underline[/u]\n[s]Strike[/s]\n[code]print(\"test\")[/code]"
+                },
+                {
+                    "id": 2,
+		    "title": "Meditation",
+                    "description": "Example meditation. This practice will give you a tone to sing. Check if you got it right.",
                     "maxHits": 20,
-                    "practiceType" : "PITCH_NAMING_DRILL",
+                    "practiceType" : "MEDITATION",
                     "practiceBatch" : [
-                        {"id" : 0, "question" : [["c'", "e'", "g'"], ["cis'"]], "anwser" : [["cis'"]]},
-                        {"id" : 1, "question" : [["c'", "e'", "g'"], ["es'"]], "anwser" : [["es'"]]},
-                        {"id" : 2, "question" : [["c'", "e'", "g'"], ["fis'"]], "anwser" : [["fis'"]]},
-                        {"id" : 3, "question" : [["c'", "e'", "g'"], ["as'"]], "anwser" : [["as'"]]},
-                        {"id" : 4, "question" : [["c'", "e'", "g'"], ["b'"]], "anwser" : [["b'"]]}
+                        {"id" : 0, "question" : [["c'"]], "anwser" : [["c'"]]},
+                        {"id" : 1, "question" : [["d'"]], "anwser" : [["d'"]]},
+                        {"id" : 2, "question" : [["e'"]], "anwser" : [["e'"]]}
                     ]
                 },
                 {
-                    "practice": 2,
+                    "id": 3,
+		    "title": "Pitch identify drill",
                     "description": "Example pitch identify drill. This practice will play 2 white tones separated by 1. You should sing the lower one.",
                     "maxHits": 20,
                     "practiceType" : "PITCH_IDENTIFY_DRILL",
@@ -37,37 +54,137 @@
                     ]
                 },
                 {
-                    "practice": 3,
-                    "description": "Example meditation. This practice will give you a tone to sing. Check if you got it right.",
+                    "id": 4,
+		    "title": "Pitch naming drill",
+                    "description": "Example pitch naming drill. This practice will play a C major chord and than a black tone. You should name the black tone.",
                     "maxHits": 20,
-                    "practiceType" : "MEDITATION",
+                    "practiceType" : "PITCH_NAMING_DRILL",
                     "practiceBatch" : [
-                        {"id" : 0, "question" : [["c'"]], "anwser" : [["c'"]]},
-                        {"id" : 1, "question" : [["d'"]], "anwser" : [["d'"]]},
-                        {"id" : 2, "question" : [["e'"]], "anwser" : [["e'"]]}
+                        {"id" : 0, "question" : [["c'", "e'", "g'"], ["cis'"]], "anwser" : [["cis'"]]},
+                        {"id" : 1, "question" : [["c'", "e'", "g'"], ["es'"]], "anwser" : [["es'"]]},
+                        {"id" : 2, "question" : [["c'", "e'", "g'"], ["fis'"]], "anwser" : [["fis'"]]},
+                        {"id" : 3, "question" : [["c'", "e'", "g'"], ["as'"]], "anwser" : [["as'"]]},
+                        {"id" : 4, "question" : [["c'", "e'", "g'"], ["b'"]], "anwser" : [["b'"]]}
                     ]
-                },
-                {
-                    "practice": 4,
-                    "description": "Audio book player. Here you will listen to David Lucas Burge audio book.",
-                    "maxHits": 20,
-                    "practiceType" : "PLAYER",
-                    "filename" : "masterclass_00_04.mp3"
-                },
-                {
-                    "practice": 5,
-                    "description": "Comments on the masterclass.",
-                    "practiceType" : "COMMENTS",
-                    "text" : "In this section i will put my comments on the audio masterclass. I hope this will help you grasp everything together and better organize yourself. More comments to come."
                 }
             ]
         },
         {
-            "group": 5,
+            "id": 1,
+            "title": "Masterclass 1",
+            "description": "Performer can only preform as well as he can hear. A composer can only compose what he can think up.",
+            "practices": [
+                {
+                    "id": 0,
+		    "title": "Listen to masterclass",
+                    "description": "Audio book player. Here you will listen to David Lucas Burge audio book.",
+                    "maxHits": 1,
+                    "practiceType" : "PLAYER",
+                    "link" : "https://www.youtube.com/watch?v=ueRNJv24oTY"
+                },
+                {
+                    "id": 1,
+		    "title": "Comments",
+                    "description": "Comments on the masterclass.",
+                    "maxHits": 1,
+                    "practiceType" : "COMMENTS",
+                    "text" : "Perfect pitch sounds so long good until you take your pace to practice it. It's always hard to learn something new. It takes time and energy.\n\n[b]Keywords[/b]\nPerformer can only preform as well as he can hear. A composer can only compose what he can think up. And you can only think up what your ear can comprehend, what your ear can grasp. You can only appreciate and enjoy whatever your own perception and awareness allows you to enjoy. It is all dependent on your own musical awareness. Perfect pitch is the color in music (black and white TV example). Its a delicate perception which opens up the ear in all area of music. Its something which is already in our ear."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Masterclass 2",
+            "description": "",
+            "practices": [
+                {
+                    "id": 0,
+		    "title": "Listen to masterclass",
+                    "description": "Audio book player. Here you will listen to David Lucas Burge audio book.",
+                    "maxHits": 1,
+                    "practiceType" : "PLAYER",
+                    "link" : "https://www.youtube.com/watch?v=l4CBhHD2kOM"
+                },
+                {
+                    "id": 1,
+		    "title": "Comments",
+                    "description": "Comments on the masterclass.",
+                    "maxHits": 1,
+                    "practiceType" : "COMMENTS",
+                    "text" : "I'm a Double bass player. Now I remembered that I couldn't decide on which instrument to practice the exercises. He says that you should be on your live, own instrument but on the other hand that people with no musical experience can both learn perfect pitch. I'm a [code]python[/code] programming hobbyist and I will try to write all the practices.\n\n[b]Keywords[/b]\nRelative and perfect pitch are both important.\nRelative pitch help us to say that the chord is [i]dominant:9[/i] and perfect pitch is helping us to hear that it is on tone [b]d[/b].\nAbsolute means non changing. [b]A[/b] has always the same sound. It is absolute.\n\n[b]Different levels:[/b]\n[ul]color awareness\ncolor discrimination (12 chromatic pitch colors) - quality of sound\n[/ul]\n\n[b]Exercise[/b]\no to your own instrument and have a listen, here for yourself that this color sounds do exist.\n"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Masterclass 3",
+            "description": "",
+            "practices": [
+                {
+                    "id": 0,
+		    "title": "Listen to masterclass",
+                    "description": "Audio book player. Here you will listen to David Lucas Burge audio book.",
+                    "maxHits": 1,
+                    "practiceType" : "PLAYER",
+                    "link" : "https://www.youtube.com/watch?v=ycBcUX6jcRk"
+                },
+                {
+                    "id": 1,
+		    "title": "Comments",
+                    "description": "Comments on the masterclass.",
+                    "maxHits": 1,
+                    "practiceType" : "COMMENTS",
+                    "text" : "About the tones. I didn't hear color as he said but I started to hear tones in space. I'm aware now that each tone has its own place in space.\n\np.s. don't force yourself.\n\n[b]Keywords[/b]\nWe learn to distinguish these colors between the very fine variations that there are the tones.\nBut they become very clear. We get to know this sound colors.\nWe have to get it out of that habit (listening horizontally) and into the habit of listening inside the tones.\nComposers have used variates keys and chords in different ways for different reasons even unconsciously.\nAbsolute pitch training is a effortless training. What we don't wanna do is practice perfect pitch training with this idea that your gonna get in there and force your ear and wipe it and shape. If you strain the ear will not hear. Ear will only feel when it feels comfortable and relaxed and you just let it listen.\nAs we do listen our color discrimination grows.\n\n3. level of perfect pitch: Refined color discrimination (you can tell if tone is sharp or flat to standard concert pitch)\n\nSome people think if you have perfect pitch that you have mental barometer in your brain witch just register [i]BOING[/i] and tells you exactly how high or low the pitch is.\n\nFirstly you can here this colors on your own instrument, but as soon as somebody plays it on some other instrument we have no idea, your completely lost. Now this is a common experience. This is perfect pitch but it's just one level of it. We can refine our hearing even more so that we can here it on all instruments. This would be called [b]Universal color discrimination[/b]. When the ear can here this colors clearly and recognized them in all the universal variety of pitches whether is our own instrument on piano, guitar, oboe, violin, bassoon, bells, little glasses of water, whistle or birds, voices.\nThe ear has to learn the distinction between pitch colors (pitch itself) and tone color (of the instrument). Spectral discrimination.\nIt's a human perception.\n\n4. level: aural recall (not raw memorising, it's hearing a color)\n\nWhen you want to sing Ab you don't judge how high or low the tone is. What you do you think up is the color sound. What does it sounds like.\n\n[b]Exercise[/b]\n[ul]Try F# ( 1 3 5 8 ) and Eb chords and listen to the difference. Were are not listening to a clear difference, it's a saddle thing. It's a feeling that when you play the F# chord and you move to the Eb something has changed.\nListen a little more for yourself.\nRead you perfect pitch handbook.\nAnother listen to the tones. Listen gently and easily to the tones.\n[/ul]"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Masterclass 4",
+            "description": "",
+            "practices": [
+                {
+                    "id": 0,
+		    "title": "Listen to masterclass",
+                    "description": "Audio book player. Here you will listen to David Lucas Burge audio book.",
+                    "maxHits": 1,
+                    "practiceType" : "PLAYER",
+                    "link" : "https://www.youtube.com/watch?v=ZJhC8WnwpKk"
+                },
+                {
+                    "id": 1,
+		    "title": "Comments",
+                    "description": "Comments on the masterclass.",
+                    "maxHits": 1,
+                    "practiceType" : "COMMENTS",
+                    "text" : "[b]Q&A[/b]\nListen if your are interested.\n\n[b]Exercise[/b]\nBe creative and be a child for a while. Listen to all chromatic tones on your instrument. From c to c and try to find a color which best matches what you feel then draw it. Colored notes or rainbow. We don't wanna miss the start. Draw your own color chart.\n(Do the practice. It allows you to listen to the sounds creatively.)\n"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Masterclass 5",
             "description": "TODO",
             "practices": [
                 {
-                    "practice": 1,
+                    "id": 0,
+		    "title": "Listen to masterclass",
+                    "description": "Audio book player. Here you will listen to David Lucas Burge audio book.",
+                    "maxHits": 1,
+                    "practiceType" : "PLAYER",
+                    "link" : "https://www.youtube.com/watch?v=yIICRXtdnac"
+                },
+                {
+                    "id": 1,
+		    "title": "Comments",
+                    "description": "Comments on the masterclass.",
+                    "maxHits": 1,
+                    "practiceType" : "COMMENTS",
+                    "text" : "[b]Keywords[/b]\n[ul][i]Phase 1[/i] - prep the ear\n[i]Phase 2[/i] - all the color become clear at the same time.\n[i]Phase 3[/i] - polish it even more[/ul]\n\nWere in a big class room.\nThe foundation on music is hearing.\nYou just follow the method. Step by step.\nWhen you do know how to listen and progress step by step it becomes simplified.\nYou need to take the time to listen. You can't rush it.\nListen to each session all the way through including the parts that may on may not apply to you.\n\nYou go to the next masterclass after you have successfully finished all exercises.\n\nWhat instrument to use.\nThe result will be faster if you use the instrument you play most. \nThe instrument that your ear is most familiar with.\nYou can use that training on any instrument. But you have to get used to the sound first.\nYou can't do chords on a flute. But you can have flute chords on synthesiser.\nUse that one sound for all your ear training practice all the way up until we get to phase 3.\nRelative pitch is a different story.\n\nWe wanna do about two octave bellow middle C and two octave above.\nStart up using a medium range of tones on your instrument at first.\n\nSome of the exercises that were going to do are hearing exercises and some are singing exercises.\nWhen your doing a hearing exercises you just listen, you don't sing the tone. We don't wanna start judging pitches with our voice. We wanna learn the pitch by hearing.\n\nWere going to divide our exercises into three main categories:\n\n[ol]solo keyboards\nsolo guitar\nteams of two (additional drill methods)[/ol]\n\nEar training meditation technique.\nIt is important to clearly understand the theory behind perfect pitch and how perfect pitch becomes cultured into the ear.\nWe want to listen to each masterclasse one at the time. We never wanna do more then one masterclass in a day.\nTake as long as you need to practice the exercises. Maybe you'll need even three weeks on one particular homework assignment from a masterclass.\nWe don't rush ourself. We go at our own pace.\nWe don't wanna be left behind on any step. This is a crucial secret to perfect pitch development.\nWe don't practice for a long time each day. The short ear training session is all it takes. Actually your ear will go faster if you just give it a short session but you do it daily.\n\nFor our solo practises we just wanna listen for about 10 or 15 minutes. Don't think you have to go on, and on, and on. Sometimes when people train their ear to much then they find they can't hear anything. Has this ever happen to you? It's like you can take a shower for 10 minutes or 30 minutes. But 10 minutes is plane.\n\nThe same for teams.\nProgress to the next masterclass when you feel ready. And if by chance you ever get stuck anywhere in your practice....\n\n[b]Exercise - Phase 1 - Color hearing:[/b]\n\n[b]Solo keyboards[/b]\nReach to your keyboard and play any two white tones that are separated by one white tone like E and G. Were just using the white tones only. Now we listen carefully to sound of these two tones. Listen individually so that you can hear each of the two tones. Usually we may only hear the top tone. So we have to listen little more closely to the bottom tone. Let your ear get inside to hear the bottom tone as well as the top tone. Now to prove that you really are hearing these tones we sing them (from the bottom up). When you can sing the tones then you have proved that you really have heard both tones. You didn't just hear the top one. If you can't hear the bottom tone than play it. Listen to it separately. Then play the two tones together again and see if you can now hear the bottom tone. Just work with your ear like this. Take your time. Work with this drill until you can any two tones separate by one white tone. You don't have to name the pitch. Were just singing the tones.\n\n[b]Solo guitar[/b]\nJust play a string at random and just try to tell which it is. Learn your string.\n\n[b]Solo instrumentalist[/b]\nEvan easter. Just listen carefully to C and D (regardless of your instrument, if your Bb instrument your C will sound Bb) and sing them very concisely like a meditation. Here is how we do it. Listen to C on your instrument. Gently hear the tone. Let it sock into your ear. Then here the pitch in your own mind. Imagine the pitch then sing the pitch (Laaa) and then sing the pitch again. Were just using C and D right now. We don't have to worry about any other tones. And were using it on our own instrument.\n\nHave fun!\n"
+                },
+                {
+                    "id": 2,
+		    "title": "Todo",
                     "description": "Any two white tones separated by one. Listen and Sing.",
                     "maxHits": 20,
                     "practiceType" : "PITCH_IDENTIFY_DRILL",

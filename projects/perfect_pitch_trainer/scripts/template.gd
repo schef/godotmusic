@@ -15,7 +15,7 @@ func generate_label(index: int, text: String):
 	l.name = "LABEL_" + str(index)
 	l.text = text
 	return l
-
+	
 func generate_button(index: int, text: String, callback: String):
 	var b = button.instance()
 	b.text = text
@@ -41,13 +41,13 @@ func set_label(index: int, text: String):
 	var node = find_node_by_name(get_tree().get_root(), "LABEL_" + str(index))
 	node.text = text
 
-#func _gui_event(event):
-#	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT):
-#		mouse_button_down = event.pressed;
-#	if (event is InputEventMouseMotion and mouse_button_down):
-#		scroll_container.scroll_horizontal -= event.speed.x * SCROLL_SENSITIVITY
-#	if (event is InputEventScreenDrag):
-#		scroll_container.scroll_horizontal -= event.relative.x
+func _gui_event(event):
+	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT):
+		mouse_button_down = event.pressed;
+	if (event is InputEventMouseMotion and mouse_button_down):
+		scroll_container.scroll_horizontal -= event.speed.x * SCROLL_SENSITIVITY
+	if (event is InputEventScreenDrag):
+		scroll_container.scroll_horizontal -= event.relative.x
 
 func init():
 	pass
@@ -62,3 +62,4 @@ func _ready():
 	init()
 	init_header()
 	init_scroll_array()
+
