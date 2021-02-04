@@ -111,11 +111,35 @@ func set_score(score: int):
 	file_data[masterclass_id][practice_id] = score
 	save_file()
 
-func get_score(practice_id):
-	var masterclass_id = get_masterclass()["id"]
+func get_score(masterclass_id, practice_id):
 	if (!file_data.has(masterclass_id)):
 		return 0
 	if (!file_data[masterclass_id].has(practice_id)):
 		return 0
 	else:
 		return file_data[masterclass_id][practice_id]
+
+func get_masterclass_by_id(masterclass_id):
+	for masterclass in get_root()["masterclasses"]:
+		if masterclass["id"] == masterclass_id:
+			return masterclass
+	return null
+	
+func get_practice_by_id(masterclass_id, practice_id):
+	for practice in get_masterclass_by_id(masterclass_id)["practices"]:
+		if practice["id"] == practice_id:
+			return practice
+	return null
+
+func is_practice_finished(masterclass_id, practice_id):
+	var max_hits = get_practice_by_id(masterclass_id, practice_id)["maxHits"]
+	var score = Global.get_score(masterclass_id, practice_id)
+	if (score >= max_hits):
+		return true
+	return false
+
+func is_masterclass_finished(masterclass_id):
+	for practice in get_masterclass_by_id(masterclass_id)["practices"]:
+		if (!is_practice_finished(masterclass_id, practice["id"])):
+			return false
+	return true

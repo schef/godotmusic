@@ -8,7 +8,10 @@ func init_scroll_array():
 	var buttonIndex = 0
 	for masterclass in Global.get_masterclasses():
 		var text = Global.get_field_from_object(masterclass, "title")
-		scroll_array.add_child(generate_button(buttonIndex, text, "on_button_pressed"))
+		var btn = generate_button(buttonIndex, text, "on_button_pressed")
+		if (Global.is_masterclass_finished(masterclass["id"])):
+			btn.modulate = Color.green
+		scroll_array.add_child(btn)
 		buttonIndex += 1
 
 func on_button_pressed(index: int):
